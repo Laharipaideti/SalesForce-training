@@ -1,0 +1,105 @@
+# day3-data-modeling
+
+## 1. Difference Between App, Object, Record, and Field
+
+| Term | Description | Example |
+|---|---|---|
+| App | A collection of related tools, tabs, and objects designed for a business purpose | College Management App |
+| Object | A database table that stores data | Student Object |
+| Record | A single entry inside an object | Student: Rahul Kumar |
+| Field | A column inside an object that stores specific information | Student Name, Roll Number |
+
+---
+
+## 2. Standard vs Custom Objects
+
+| Standard Objects | Custom Objects |
+|---|---|
+| Pre-built by Salesforce | Created by users |
+| Available by default | Built according to business needs |
+| Examples: Account, Contact, Opportunity | Examples: Student, Course, Attendance |
+| Cannot be deleted easily | Fully customizable |
+
+### Standard Object Examples
+- Account
+- Contact
+- Opportunity
+- Lead
+
+### Custom Object Examples
+- Student
+- Faculty
+- Exam
+- Attendance
+
+---
+
+## 3. Your College Data Model
+
+### Objects
+1. Student
+2. Faculty
+3. Course
+4. Attendance
+5. Exam
+6. Fee
+
+---
+
+### Relationships
+
+| Parent Object | Child Object | Relationship |
+|---|---|---|
+| Student | Attendance | One-to-Many |
+| Student | Fee | One-to-Many |
+| Course | Exam | One-to-Many |
+| Faculty | Course | One-to-Many |
+| Student | Course | Many-to-Many |
+
+---
+
+### Diagram/Image
+
+```text
+College Management App
+
+Faculty ------< Course >------ Student
+                    |
+                    |
+                 Attendance
+                    |
+                  Exam
+                    |
+                   Fee
+
+4. Formula Fields
+
+Formula fields automatically calculate values using other field data.
+
+Example 1: Student Age
+TODAY() - Date_of_Birth__c
+
+5. Validation Rules
+
+Validation rules ensure correct data entry in Salesforce.
+
+Example 1: Phone Number Validation
+LEN(Phone__c) <> 10
+
+This rule ensures the phone number contains exactly 10 digits.
+
+Example 2: Prevent Negative Fee Amount
+Fee_Amount__c < 0
+
+This rule prevents users from entering negative fee values.
+
+Example 3: Mandatory Email Validation
+ISBLANK(Email__c)
+
+6. Reflection: Why Structured Enterprise Data Matters
+
+Structured enterprise data helps organizations store, manage, and analyze information efficiently. In Salesforce, properly organized data improves reporting, automation, security, and decision-making.
+
+For a college management system, structured data helps track students, attendance, exams, fees, and faculty records accurately. It reduces errors, improves communication, and supports better administrative management.
+
+Good data modeling also helps businesses scale applications easily and maintain consistency across departments.
