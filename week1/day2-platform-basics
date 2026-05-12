@@ -1,0 +1,79 @@
+# day2-platform-basics
+
+## 1. What is Salesforce Platform?
+
+Salesforce Platform is a cloud-based platform that helps businesses build and manage applications, automate processes, store customer data, and improve customer relationships. It provides tools for creating apps, managing databases, generating reports, and customizing business workflows without needing heavy infrastructure setup.
+
+The platform supports both low-code configuration and advanced coding, making it useful for admins, developers, and companies of all sizes.
+
+---
+
+## 2. Explain the Following
+
+### App
+An App in Salesforce is a collection of tools, tabs, objects, and features grouped together for a specific business purpose. Apps help users easily access related functionalities in one place.
+
+Example:
+- Sales App
+- Service App
+- College Management App
+
+---
+
+### Object
+An Object is like a database table used to store information in Salesforce. Each object contains records and fields.
+
+Types of Objects:
+- Standard Objects (Account, Contact, Opportunity)
+- Custom Objects (Student, Course, Event)
+
+Example:
+- Student Object stores student details.
+- Course Object stores course information.
+
+---
+
+### Tab
+A Tab is a user interface element that helps users access objects, records, dashboards, or apps quickly.
+
+Examples:
+- Accounts Tab
+- Students Tab
+- Reports Tab
+
+Tabs make navigation easier inside Salesforce applications.
+
+---
+
+## 3. Difference: Configuration vs Coding
+
+| Configuration | Coding |
+|---|---|
+| Uses clicks, drag-and-drop tools | Uses programming languages |
+| Easier and faster to implement | Requires development knowledge |
+| Done using Flow, Process Builder, Validation Rules | Done using Apex, LWC, Visualforce |
+| Mostly handled by Admins | Mostly handled by Developers |
+| Best for simple automation and customization | Best for complex business logic |
+
+---
+
+## 4. Your System Design (College Management System)
+
+### App:
+College Management App
+
+### Objects:
+- Student
+- Faculty
+- Course
+- Attendance
+- Exam
+- Fee
+
+### User Interaction:
+1. Students can view courses, attendance, and exam results.
+2. Faculty can update attendance and marks.
+3. Admin manages student records and fee details.
+4. Reports and dashboards help track academic performance and student data.
+
+This system helps automate college operations and improves data management using Salesforce Platform.
