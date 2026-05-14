@@ -1,0 +1,137 @@
+# Day 4 - Flow Builder
+
+## 1. What is Flow Builder?
+
+Flow Builder is a Salesforce automation tool used to automate business processes without writing code. It helps users create workflows using a visual drag-and-drop interface.
+
+With Flow Builder, organizations can:
+- Automate repetitive tasks
+- Update records automatically
+- Collect user input through screens
+- Send notifications and emails
+- Improve efficiency and reduce manual work
+
+Flow Builder is one of the most powerful automation tools in Salesforce.
+
+---
+
+# 2. Types of Flows
+
+## Screen Flow
+
+A Screen Flow is a flow that interacts with users through screens. It collects information from users and performs actions based on the input.
+
+### Features:
+- User-friendly interface
+- Collects data from users
+- Can display messages and forms
+- Used in apps, portals, and service systems
+
+### Example:
+A student registration form where users enter:
+- Name
+- Email
+- Course
+- Phone Number
+
+The flow saves the information automatically.
+
+---
+
+## Record-Triggered Flow
+
+A Record-Triggered Flow runs automatically when a record is:
+- Created
+- Updated
+- Deleted
+
+It helps automate backend processes without user interaction.
+
+### Features:
+- Fully automatic
+- Runs in real time
+- Reduces manual tasks
+- Improves data consistency
+
+### Example:
+When an Opportunity status changes to "Closed Won":
+- Send a confirmation email
+- Create a follow-up task
+- Update customer status automatically
+
+---
+
+# 3. Your Automation Ideas
+
+## 1. Student Admission Automation
+When a student application is submitted:
+- Create student record
+- Send confirmation email
+- Assign counselor automatically
+
+---
+
+## 2. Library Due Date Reminder
+Automatically send reminder emails before book return dates.
+
+---
+
+## 3. Attendance Warning System
+If attendance falls below 75%:
+- Send warning email to student
+- Notify faculty
+
+---
+
+## 4. Fee Payment Notification
+When fees are paid:
+- Update payment status
+- Send receipt email automatically
+
+---
+
+## 5. Placement Registration Flow
+Students can register for placements using a screen flow.
+The system:
+- Stores student details
+- Sends confirmation message
+- Updates placement database
+
+---
+
+# 4. Your Flow Diagram
+
+## Example Flow Diagram
+
+```text
+Student Applies
+       ↓
+Screen Flow Collects Data
+       ↓
+Create Student Record
+       ↓
+Send Confirmation Email
+       ↓
+Assign Counselor
+       ↓
+Application Completed
+
+5. Manual vs Automated Process
+Manual Process	           Automated Process
+Requires human             effort	Runs automatically
+Time consuming	           Saves time
+Higher chance of errors	   More accurate
+Slow processing	           Faster execution
+Difficult to track	       Easy monitoring
+
+6. Reflection
+
+Automation is very important in enterprise systems because organizations handle thousands of records and tasks every day. Manual processes are slow and can lead to mistakes.
+
+Using Flow Builder, companies can:
+
+Save time
+Increase productivity
+Reduce errors
+Improve customer experience
+Maintain consistent processes
