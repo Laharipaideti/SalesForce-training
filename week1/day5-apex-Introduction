@@ -1,0 +1,209 @@
+# Day 5 - Apex Introduction
+
+## 1. What is Apex?
+
+Apex is Salesforce’s programming language used to add custom business logic to applications. It is similar to Java and runs on the Salesforce platform.
+
+Developers use Apex when business requirements cannot be completed using only clicks or configuration tools like Flow Builder.
+
+Apex helps to:
+- Automate complex processes
+- Perform calculations
+- Validate data
+- Integrate external systems
+- Create custom APIs and services
+
+Apex runs securely on Salesforce servers and supports object-oriented programming concepts.
+
+---
+
+# 2. Difference
+
+## Flow vs Apex
+
+| Flow | Apex |
+|------|------|
+| No-code automation tool | Programming language |
+| Uses drag-and-drop interface | Uses code |
+| Easy for admins | Used by developers |
+| Best for simple automation | Best for complex logic |
+| Faster development | More flexible and powerful |
+| Limited customization | Advanced customization possible |
+
+---
+
+## Configuration vs Coding
+
+| Configuration | Coding |
+|--------------|--------|
+| Click-based setup | Written using code |
+| Easy to maintain | Requires programming knowledge |
+| Faster for simple tasks | Better for advanced requirements |
+| Uses tools like Flow and Validation Rules | Uses Apex and Visualforce/LWC |
+| Limited flexibility | Highly customizable |
+
+---
+
+# 3. Real Examples Where Apex Is Needed
+
+## 1. Automatic Scholarship Eligibility Calculation
+
+When a student record is updated:
+- Calculate percentage
+- Check attendance
+- Verify income criteria
+- Automatically decide scholarship eligibility
+
+This logic may become too complex for Flow alone.
+
+---
+
+## 2. Integration with External Payment Gateway
+
+Apex is used to:
+- Connect with external APIs
+- Verify payment status
+- Update fee records automatically
+
+Flows cannot handle advanced API integrations efficiently.
+
+---
+
+## 3. Bulk Student Data Processing
+
+If thousands of student records need:
+- Ranking
+- Result generation
+- Attendance calculations
+
+Apex batch processing is used for better performance.
+
+---
+
+# 4. Integrated System Design
+
+# College Management System
+
+## CRM Usage
+
+Salesforce CRM helps manage:
+- Students
+- Faculty
+- Courses
+- Admissions
+- Fees
+- Placements
+
+The system stores and organizes all college data in one platform.
+
+---
+
+## Objects
+
+### Standard Objects
+- Account
+- Contact
+
+### Custom Objects
+- Student
+- Course
+- Faculty
+- Attendance
+- Fees
+- Placement
+- Examination
+
+---
+
+## Relationships
+
+| Parent Object | Child Object | Relationship |
+|---------------|--------------|--------------|
+| Student | Attendance | One-to-Many |
+| Student | Fees | One-to-Many |
+| Course | Student | One-to-Many |
+| Faculty | Course | One-to-Many |
+| Student | Placement | One-to-Many |
+
+---
+
+## Validation Rules
+
+### Example 1
+Student age cannot be less than 16.
+
+### Example 2
+Fee amount cannot be negative.
+
+### Example 3
+Attendance percentage cannot exceed 100%.
+
+---
+
+## Flow Usage
+
+### Admission Flow
+- Collect student information
+- Create student record
+- Send confirmation email
+
+### Fee Payment Flow
+- Update payment status
+- Generate notification
+
+### Attendance Alert Flow
+- Notify students with low attendance
+
+---
+
+## Apex Usage
+
+### Scholarship Processing
+Apex calculates scholarship eligibility automatically.
+
+### Result Generation
+Apex processes marks and calculates grades.
+
+### External Integration
+Apex connects with online payment systems.
+
+---
+
+# 5. Pseudocode Examples
+
+## Example 1: Attendance Warning
+
+```text
+IF attendance < 75%
+THEN
+    Send warning email
+ENDIF
+  
+## Example 2: Scholarship Eligibility
+IF percentage > 85
+AND attendance > 80
+THEN
+    Scholarship = Approved
+ELSE
+    Scholarship = Rejected
+ENDIF
+
+##Example 3: Fee Payment Status
+IF payment_received = TRUE
+THEN
+    Status = Paid
+ELSE
+    Status = Pending
+ENDIF
+
+6. Reflection
+
+Enterprise systems grow larger and more complex over time. Initially, configuration tools like Flow Builder are enough for simple business processes. However, organizations eventually require advanced automation, integrations, calculations, and custom logic.
+
+Programming using Apex becomes important because it provides:
+
+Greater flexibility
+Better scalability
+Advanced integrations
+Complex business logic handling
+Improved automation capabilities
