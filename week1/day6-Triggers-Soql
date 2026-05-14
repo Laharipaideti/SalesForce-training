@@ -1,0 +1,145 @@
+# Day 6 - Triggers & SOQL
+
+## 1. What is SOQL?
+
+SOQL (Salesforce Object Query Language) is a query language used in Salesforce to retrieve data from objects.
+
+It is similar to SQL but designed specifically for Salesforce data.
+
+SOQL helps developers:
+- Fetch records from objects
+- Filter data using conditions
+- Sort records
+- Retrieve related object data
+- Process information inside Apex code
+
+### Example SOQL Query
+
+```sql
+SELECT Name, Email FROM Student__c WHERE Attendance__c < 75
+
+## 2. What is an Apex Trigger?
+
+An Apex Trigger is code that automatically executes before or after changes occur in Salesforce records.
+
+Triggers help automate backend business logic when records are:
+
+Inserted
+Updated
+Deleted
+Restored
+
+Triggers are commonly used for:
+
+Validations
+Automatic updates
+Notifications
+Calculations
+Data synchronization
+Example
+
+When a student fee record is updated:
+
+Automatically change payment status
+Generate receipt information
+Update student account
+
+  
+## 3. Difference
+Flow vs Trigger
+Flow	Trigger
+No-code automation	Code-based automation
+Easy to build	Requires Apex programming
+Best for simple processes	Best for complex logic
+Drag-and-drop interface	Written using code
+Limited processing capability	High performance and flexibility
+Used by admins	Used by developers
+Before vs After Trigger
+Before Trigger	After Trigger
+Runs before saving record	Runs after saving record
+Used for validation and updates	Used for related actions
+Faster because no extra save needed	Used when record ID is required
+Can modify record values directly	Cannot directly modify same record
+Example: Set default values	Example: Send notifications
+
+  
+## 4. Your Trigger Use Cases
+     1. Attendance Warning Trigger
+
+When attendance drops below 75%:
+
+Automatically mark warning status
+Notify student
+     2. Scholarship Eligibility Trigger
+
+When exam marks are updated:
+
+Calculate percentage
+Update scholarship eligibility
+    3. Fee Payment Trigger
+
+When fee payment is completed:
+
+Change payment status to "Paid"
+Generate receipt number automatically
+    4. Placement Eligibility Trigger
+
+When student CGPA is updated:
+
+Check placement eligibility
+Update placement status
+    5. Course Capacity Trigger
+
+When course enrollment exceeds limit:
+
+Prevent additional registrations
+Display warning message
+  
+## 5. Query Examples
+Example 1
+Get all students with attendance below 75%.
+SOQL
+SELECT Name, Attendance__c
+FROM Student__c
+WHERE Attendance__c < 75
+  
+Example 2
+Get all students whose fee status is pending.
+SOQL
+SELECT Name, Fee_Status__c
+FROM Student__c
+WHERE Fee_Status__c = 'Pending'
+  
+Example 3
+Get all students enrolled in Computer Science course.
+SOQL
+SELECT Name, Course__c
+FROM Student__c
+WHERE Course__c = 'Computer Science'
+  
+Example 4
+Get students eligible for placements.
+SOQL
+SELECT Name, CGPA__c
+FROM Student__c
+WHERE CGPA__c >= 7
+  
+Example 5
+Get all faculty members handling more than 3 courses.
+SOQL
+SELECT Name
+FROM Faculty__c
+WHERE Number_of_Courses__c > 3
+
+  
+## 6. Reflection
+
+Enterprise systems manage large amounts of continuously changing data. Manual monitoring is difficult and inefficient.
+
+Triggers and automation help systems react immediately when data changes occur. This allows organizations to:
+
+Maintain accurate data
+Reduce manual work
+Improve efficiency
+Enforce business rules
+Provide faster services
