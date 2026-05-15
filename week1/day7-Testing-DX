@@ -1,0 +1,207 @@
+# Day 7 – Testing & Salesforce DX
+
+## 1. Why Testing Matters
+
+Testing is important in Salesforce because enterprise applications handle critical business data such as customers, sales, payments, and support operations. A small bug can affect thousands of users and records.
+
+Testing helps developers:
+
+- Verify that Apex code works correctly
+- Prevent future bugs during deployments
+- Ensure business logic behaves as expected
+- Improve software quality and reliability
+- Validate automation processes
+- Meet Salesforce deployment requirements
+
+In Salesforce, at least 75% Apex code coverage is required before deploying code to production.
+
+Testing also helps teams confidently release updates without breaking existing features.
+
+---
+
+# 2. What is Asynchronous Apex?
+
+Asynchronous Apex allows Salesforce to run processes in the background instead of immediately. This helps improve system performance and handle large operations efficiently.
+
+## Types of Asynchronous Apex
+
+### Future Methods
+Used for background processing and callouts.
+
+Example:
+- Sending API requests
+- Updating records asynchronously
+
+### Queueable Apex
+More advanced than Future methods.
+
+Features:
+- Supports complex objects
+- Allows job chaining
+- Better monitoring
+
+### Batch Apex
+Used to process large numbers of records in smaller chunks.
+
+Example:
+- Updating millions of records
+- Cleaning old database records
+
+### Scheduled Apex
+Runs Apex code at specific times.
+
+Example:
+- Daily reports
+- Nightly cleanup jobs
+
+---
+
+# 3. What is Salesforce DX?
+
+Salesforce DX (Developer Experience) is a modern development approach for Salesforce applications.
+
+It helps developers use source-driven development and improve team collaboration.
+
+## Features of Salesforce DX
+
+- Scratch Orgs
+- CLI (Command Line Interface)
+- Source Control Integration
+- Continuous Integration
+- Faster Development Workflow
+- Package-based Development
+
+## Benefits
+
+- Better teamwork
+- Easier deployments
+- Faster testing
+- Improved version control
+- Modern DevOps workflow
+
+Salesforce DX is commonly used with GitHub and VS Code.
+
+---
+
+# 4. Complete System Workflow
+
+## End-to-End Salesforce Development Workflow
+
+### Step 1: Requirement Gathering
+Business teams explain requirements such as:
+- Lead management
+- Customer support automation
+- Sales tracking
+
+### Step 2: Data Modeling
+Developers create:
+- Objects
+- Fields
+- Relationships
+- Validation Rules
+
+### Step 3: UI Configuration
+Configure:
+- Page Layouts
+- Lightning Apps
+- Record Types
+- Profiles
+- Permission Sets
+
+### Step 4: Automation
+Build automation using:
+- Flows
+- Process Builder
+- Apex Triggers
+
+### Step 5: Apex Development
+Develop custom business logic using:
+- Apex Classes
+- Triggers
+- SOQL
+- SOSL
+
+### Step 6: Testing
+Write Apex Test Classes to:
+- Verify logic
+- Improve code coverage
+- Validate workflows
+
+### Step 7: Version Control
+Push code to GitHub repository for tracking and collaboration.
+
+### Step 8: Salesforce DX Development
+Use:
+- VS Code
+- Salesforce CLI
+- Scratch Orgs
+
+for source-driven development.
+
+### Step 9: Deployment
+Deploy changes from sandbox to production using:
+- Change Sets
+- Salesforce DX
+- CI/CD Pipelines
+
+### Step 10: Maintenance
+Monitor:
+- Bugs
+- User feedback
+- Performance
+- Security updates
+
+---
+
+# 5. Important Test Cases
+
+## Account Test Cases
+- Verify Account creation
+- Verify required field validation
+- Verify duplicate prevention
+
+## Contact Test Cases
+- Verify Contact is linked to Account
+- Verify email validation
+- Verify phone number format
+
+## Opportunity Test Cases
+- Verify Opportunity stage updates
+- Verify amount calculations
+- Verify Close Date validation
+
+## Trigger Test Cases
+- Verify trigger runs on insert
+- Verify trigger updates related records
+- Verify trigger prevents invalid data
+
+## Flow Test Cases
+- Verify Flow launches correctly
+- Verify field updates happen automatically
+- Verify email alerts are sent
+
+## Batch Apex Test Cases
+- Verify batch processes all records
+- Verify batch handles failures correctly
+- Verify governor limits are respected
+
+---
+
+# 6. Reflection
+
+Enterprise software development requires structured workflows because large organizations manage huge amounts of business-critical data and processes.
+
+Without proper workflows:
+- Bugs increase
+- Deployments fail
+- Teams lose coordination
+- Data becomes inconsistent
+
+Structured workflows provide:
+- Better collaboration
+- Reliable deployments
+- Higher software quality
+- Easier maintenance
+- Strong security and governance
+
+Salesforce development combines testing, automation, version control, and deployment practices to build scalable enterprise applications efficiently.
