@@ -6,3 +6,6 @@ DAY-2 Platform-Basics
 <img width="1582" height="675" alt="Image" src="https://github.com/user-attachments/assets/7307707c-9418-4f08-a98c-62787905e897" />
 
 <img width="1911" height="861" alt="Image" src="https://github.com/user-attachments/assets/46257df8-083d-4090-9d20-3367376b5bae" />
+
+DAY-8-UI screens
+<img width="1898" height="970" alt="Image" src="https://github.com/user-attachments/assets/af55b151-e43b-445e-ab24-0c39fd020129" />
